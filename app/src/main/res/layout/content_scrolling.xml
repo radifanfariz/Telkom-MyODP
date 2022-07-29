@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="?android:dividerHorizontal"
+        android:showDividers="middle">
+    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txtNo"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:text="No"/>
+            <TextView
+                android:id="@+id/txtOdpName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="16dp"
+                android:text="ODP Name"/>
+            <TextView
+                android:id="@+id/txtLatitude"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Latitude"/>
+            <TextView
+                android:id="@+id/txtLongitude"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Longitude"/>
+            <TextView
+                android:id="@+id/txtLink"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Navigation"/>
+        </LinearLayout>
+    </TableRow>
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+            <include layout="@layout/item_placeholder_layout"/>
+        </LinearLayout>
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+    <TableRow>
+        <ScrollView
+            android:id="@+id/theScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylcerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+    </TableRow>
+    </TableLayout>
+</androidx.core.widget.NestedScrollView>
